@@ -1,3 +1,5 @@
+package com.github.MDingas.ALTO;
+
 public class Cost extends CostInfo {
     private String value;
 
@@ -26,6 +28,10 @@ public class Cost extends CostInfo {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String toString() {
+        return "teste numero 1";
     }
 
 

@@ -1,3 +1,5 @@
+package com.github.MDingas.ALTO;
+
 public class CostInfo {
     private CostMode mode;
     private String metric;
