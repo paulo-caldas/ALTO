@@ -1,5 +1,8 @@
 package com.github.MDingas.ALTO;
 
+/**
+ *  Meta information about a cost
+ */
 public class CostInfo {
     private CostMode mode;
     private String metric;

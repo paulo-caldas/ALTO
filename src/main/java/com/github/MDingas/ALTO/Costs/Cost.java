@@ -1,5 +1,9 @@
 package com.github.MDingas.ALTO;
 
+/**
+ * Concrete specification of a CostInfo, thus including the actual value
+ * If the cost is numerical, simply add the string representation of it
+ */
 public class Cost extends CostInfo {
     private String value;
 
