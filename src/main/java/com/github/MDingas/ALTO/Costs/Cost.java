@@ -1,4 +1,4 @@
-package com.github.MDingas.ALTO;
+package com.github.MDingas.ALTO.Costs;
 
 /**
  * Concrete specification of a CostInfo, thus including the actual value

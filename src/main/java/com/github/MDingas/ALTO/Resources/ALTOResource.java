@@ -1,4 +1,4 @@
-package com.github.MDingas.ALTO;
+package com.github.MDingas.ALTO.Resources;
 
 import javax.ws.rs.core.MediaType;
 import java.net.URL;

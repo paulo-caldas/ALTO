@@ -1,4 +1,4 @@
-package com.github.MDingas.ALTO;
+package com.github.MDingas.ALTO.Costs;
 
 /**
  * As per RFC 7285

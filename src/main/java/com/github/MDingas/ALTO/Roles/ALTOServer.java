@@ -1,4 +1,4 @@
-package com.github.MDingas.ALTO;
+package com.github.MDingas.ALTO.Roles;
 
 import com.github.MDingas.ALTO.Resources.ALTOResource;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.github.MDingas.ALTO;
+package com.github.MDingas.ALTO.Costs;
 
 /**
  *  Meta information about a cost
