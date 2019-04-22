@@ -1,10 +1,15 @@
 package com.github.MDingas.ALTO.Roles;
 
+import com.github.MDingas.ALTO.Costs.CostInfo;
 import com.github.MDingas.ALTO.Resources.ALTOResource;
+import com.github.MDingas.ALTO.Resources.GenericMulticostMap;
+import com.github.MDingas.ALTO.Resources.NetworkMap;
 import org.json.JSONObject;
 
+import java.net.URI;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,25 +38,19 @@ public class ALTOServer {
 
     }
 
-    /**
-     * No parameters given, thus only use this method when a GET request is used (RFC 7285)
-     * @param url path to the resource
-     * @return requested resource
-     */
-    public ALTOResource getALTOResource(URL url) {
+    public NetworkMap getNetworkMap(
+            URI uri,
+            List<String> pidFilter) {
 
         return null;
     }
 
-    /**
-     * Parameters are given, thus use this method only when a POST request is used (RFC 7285)
-     * @param url path to the resource
-     * @param params additional parameters to filter requests, as per
-     * @return
-     */
-    public ALTOResource getALTOResource(URL url, JSONObject params) {
+    public GenericMulticostMap getMulticostMap(
+            URI uri,
+            List<CostInfo> costFilter,
+            List<String> srcPIDFilter,
+            List<String> dstPIDFilter) {
 
         return null;
     }
-
 }
