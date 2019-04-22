@@ -2,7 +2,7 @@ package com.github.MDingas.ALTO.Resources;
 
 import javax.ws.rs.core.MediaType;
 import java.net.InetAddress;
-import java.net.URL;
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
@@ -15,8 +15,8 @@ public class NetworkMap extends ALTOResource {
     // List<InetAddress> aggregatedAddresses = aggregatedAddressesMap.get("PID1");
     private Map<String, List<InetAddress>> aggregatedAddressesMap;
 
-    public NetworkMap(URL url, MediaType mediaType, List<MediaType> acceptTypes, String name, String tag, Map<String, List<InetAddress>> aggregatedAddressesMap) {
-        super(url, mediaType, acceptTypes, name, tag);
+    public NetworkMap(URI uri, MediaType mediaType, List<MediaType> acceptTypes, String name, String tag, Map<String, List<InetAddress>> aggregatedAddressesMap) {
+        super(uri, mediaType, acceptTypes, name, tag);
         this.aggregatedAddressesMap = aggregatedAddressesMap;
     }
 }

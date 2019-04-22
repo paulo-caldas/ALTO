@@ -12,16 +12,13 @@ public class ALTOResourceUploader {
 
     private URL currentALTOServerURL; // ALTO Server URL from which to upload
 
-    public ALTOResourceUploader() {
-    }
-
-    public void connect() {
-
+    public ALTOResourceUploader(URL url) {
+        // TODO connection checks
+        this.currentALTOServerURL = url;
     }
 
     public void uploadNetworkMap(NetworkMap networkMap) {
         // TODO
-
     }
 
     public void uploadCostMap(GenericMulticostMap genericMulticostMap) {

@@ -4,7 +4,7 @@ import com.github.MDingas.ALTO.Costs.Cost;
 import org.apache.commons.lang3.tuple.Pair;
 
 import javax.ws.rs.core.MediaType;
-import java.net.URL;
+import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
@@ -20,8 +20,8 @@ public class GenericMulticostMap extends ALTOResource {
     // Cost c = multicostMapMap.get(new Pair("PID0", "PID1")).get("routing-cost");
     Map<Pair<String, String>, Map<String, Cost>> multicostMapMap;
 
-    public GenericMulticostMap(URL url, MediaType mediaType, List<MediaType> acceptTypes, String name, String tag, Map<Pair<String, String>, Map<String, Cost>> genericMulticostMap) {
-        super(url, mediaType, acceptTypes, name, tag);
+    public GenericMulticostMap(URI uri, MediaType mediaType, List<MediaType> acceptTypes, String name, String tag, Map<Pair<String, String>, Map<String, Cost>> genericMulticostMap) {
+        super(uri, mediaType, acceptTypes, name, tag);
         this.multicostMapMap = genericMulticostMap;
     }
 }

@@ -1,6 +1,7 @@
 package com.github.MDingas.ALTO.Resources;
 
 import javax.ws.rs.core.MediaType;
+import java.net.URI;
 import java.net.URL;
 import java.util.List;
 
@@ -9,26 +10,26 @@ import java.util.List;
  * must extend from this class
  */
 public class ALTOResource {
-    private URL url; // URL from which to access such resource
+    private URI uri; // URI from which to access such resource
     private MediaType mediaType;
     private List<MediaType> acceptTypes;
     private String name;
     private String tag; // Used to check how recent a resource is, compared to a similar one. Advised to use timestamps
 
-    public ALTOResource(URL url, MediaType mediaType, List<MediaType> acceptTypes, String name, String tag) {
-        this.url = url;
+    public ALTOResource(URI uri, MediaType mediaType, List<MediaType> acceptTypes, String name, String tag) {
+        this.uri = uri;
         this.mediaType = mediaType;
         this.acceptTypes = acceptTypes;
         this.name = name;
         this.tag = tag;
     }
 
-    public URL getUrl() {
-        return url;
+    public URI getUrl() {
+        return uri;
     }
 
-    public void setUrl(URL url) {
-        this.url = url;
+    public void setUri(URI uri) {
+        this.uri = uri;
     }
 
     public MediaType getMediaType() {

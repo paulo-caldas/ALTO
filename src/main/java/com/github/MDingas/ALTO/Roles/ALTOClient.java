@@ -17,11 +17,9 @@ public class ALTOClient {
 
     private URL currentALTOServerURL; // ALTO Server URL from which to make queries
 
-    public ALTOClient () {
-    }
-
-    public void connect(URL url) {
-        // TODO
+    public ALTOClient (URL url) {
+        // TODO connection checks
+        this.currentALTOServerURL = url;
     }
 
     private ALTOResource getFilteredAltoResource(
