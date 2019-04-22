@@ -1,0 +1,104 @@
+{
+
+    "IRD" : {
+        "media-type" : "application/alto-directory+json",
+        "cost-types" : {
+            "num-routing": {
+                "cost-mode"  : "numerical",
+                "cost-metric": "routingcost",
+                "description": "My default"
+            },
+            "num-rtt":     {
+                "cost-mode"  : "numerical",
+                "cost-metric": "rtt"
+            },
+            "ord-routing": {
+                "cost-mode"  : "ordinal",
+                "cost-metric": "routingcost"
+            },
+            "ord-rtt":     {
+                "cost-mode"  : "ordinal",
+                "cost-metric": "rtt",
+                "description": "Round trip time in milliseconds"
+            },
+            "num-pktloss":     {
+                "cost-mode"  : "numerical",
+                "cost-metric": "pktloss",
+                "description": "Packet loss in percentage"
+            }
+
+        },
+        "index" : {
+            "default-topology" : {
+                "content-type" : "meta/topology",
+                "tag" : "asaaassalsla11d9dasd"
+            },
+
+            "my-default-network-map": {
+                "content-type" : "application/alto-networkmap+json",
+                "tag" : "asdal2j1l2jlk1d9dasd"
+            },
+
+            "rtt-cost-map" : {
+                "content-type" : "application/alto-costmap+json",
+                "tag" : "asdal2j1l2jbraaaaasd",
+                "capabilities": {
+                    "cost-type-names" : [ "num-rtt" ]
+                }
+            },
+
+            "pktloss-cost-map" : {
+                "content-type" : "application/alto-costmap+json",
+                "tag" : "asdal2j1l2jbraaaaasd",
+                "capabilities": {
+                    "cost-type-names" : [ "num-pktloss" ]
+                }
+            }
+        }
+    },
+
+    "default-topology" : {
+        "graph" : {
+            "adjacency" : {
+                "127.0.0.1/24" : ["132.42.4.21/36" , "213.212.33.2"],
+                "127.0.0.2/24" : ["132.42.4.21/36"]
+            }
+        }
+    },
+
+    "my-default-network-map" : {
+        "PID1" : {
+            "ipv4" : [
+                "192.0.2.0/24",
+                "198.51.100.0/25"
+            ]
+        },
+        "PID2" : {
+            "ipv4" : [
+                "198.51.100.128/25"
+            ]
+        },
+        "PID3" : {
+            "ipv4" : [
+                "0.0.0.0/0"
+            ],
+            "ipv6" : [
+                "::/0"
+            ]
+        }
+
+    },
+
+    "rtt-cost-map": {
+        "PID1": { "PID1": 1,  "PID2": 5,  "PID3": 10 },
+        "PID2": { "PID1": 5,  "PID2": 1,  "PID3": 15 },
+        "PID3": { "PID1": 20, "PID2": 15  }
+    },
+
+
+    "pktloss-cost-map": {
+        "PID1": { "PID1": 0,  "PID2": 2,  "PID3": 10 },
+        "PID2": { "PID1": 0,  "PID2": 1,  "PID3": 0 },
+        "PID3": { "PID1": 5, "PID2": 5  }
+    }
+}
