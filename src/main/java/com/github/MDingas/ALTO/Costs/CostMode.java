@@ -1,10 +1,9 @@
 package com.github.MDingas.ALTO.Costs;
 
 /**
- * As per RFC 7285
+ * Modes that a cost can take. As per RFC 7285
  */
-enum CostMode {
-    NUMERICAL, // 1, 2, 3.0, etc
-    ORDINAL, // numerical value that states preference. The smallest the number, the higher the preference
-    NOMINAL // "up", "down", "example", etc
+public enum CostMode {
+    NUMERICAL, // Integer or floating point, positive or negative, on which operations can be performed
+    ORDINAL, // Numerical values that state preference. The smaller the number, the higher the preference
 }
